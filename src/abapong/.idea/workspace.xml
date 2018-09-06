@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67b9a7e1-7088-4be9-bef2-a4da50ceeec5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angular_frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../angular_frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angular_frontend/src/app/components/leaderboard/leaderboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../angular_frontend/src/app/components/leaderboard/leaderboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angular_frontend/src/app/components/leaderboard/leaderboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angular_frontend/src/app/components/leaderboard/leaderboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angular_frontend/src/app/services/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angular_frontend/src/app/services/api.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angular_frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../angular_frontend/tsconfig.json" afterDir="false" />
-    </list>
+    <list default="true" id="67b9a7e1-7088-4be9-bef2-a4da50ceeec5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
