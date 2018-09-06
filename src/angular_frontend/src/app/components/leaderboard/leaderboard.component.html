@@ -1,3 +1,16 @@
 <p>
   leaderboard works!
 </p>
+
+<div >
+  <table class="leaderboard">
+      <tr *ngFor="let player of players">
+        <td>
+        <p>{{ player.name }}</p>
+        </td>
+        <td>
+            {{ player.elo }}
+        </td>
+      </tr>
+  </table>
+</div>  
