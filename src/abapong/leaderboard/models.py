@@ -6,7 +6,7 @@ class Player (models.Model):
     created = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=20, blank=False)
     elo = models.IntegerField(default=1500)
-    rdifTag = models.CharField(blank=False, max_length=30)
+    rfidTag = models.CharField(blank=False, max_length=30)
 
     class Meta:
         ordering = ('created',)
