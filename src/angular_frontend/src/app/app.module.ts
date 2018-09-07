@@ -5,17 +5,21 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
-import { RegistrerComponent } from 'components/registrer/registrer.component';
+import { RegisterComponent } from 'components/register/register.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeaderboardComponent,
-    RegistrerComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule // this is the HTTP module
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
