@@ -2,12 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
 import { HttpClientModule } from '@angular/common/http';
+
+import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
+import { RegistrerComponent } from 'components/registrer/registrer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    RegistrerComponent,
   ],
   imports: [
     BrowserModule,

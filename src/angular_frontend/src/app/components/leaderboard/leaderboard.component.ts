@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../services/api.service';
+import { ApiService } from 'services/api.service';
+import { Player } from 'app/model';
 
 @Component({
   selector: 'app-leaderboard',
@@ -8,16 +9,21 @@ import { ApiService } from '../../services/api.service';
 })
 export class LeaderboardComponent implements OnInit {
 
-  constructor(private _apiService: ApiService) { }
+  public players: Player[];
   public data;
+  constructor(private _apiService: ApiService) {
+    _apiService.getPlayer().subscribe(p => {
+      this.players = p;
+    });
+   }
+
   ngOnInit() {
-    this.getData();
+    this.getPlayer();
   }
-  getData() {
-    this._apiService.getData().subscribe(data => { this.data = data; },
+  getPlayer() {
+    this._apiService.getPlayer().subscribe(data => { this.data = data; },
     err => console.error(err),
-    () => console.log('done loading data'));
-    console.log('test' + this.data);
+    () => console.log(this.data));
   }
 
 }
