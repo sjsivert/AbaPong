@@ -1,0 +1,14 @@
+<p>
+  registrer works!
+</p>
+<form #registerForm="ngForm">
+  <div class="form-group">
+ <label for="name">Name:</label> 
+ <input  type="text" class="form-control" required [(ngModel)]="player.name" name="name">
+ {{ player.name }}
+  <label for="rfid">RFID:</label>
+  <input  type="text" class="form-control" required [(ngModel)]="player.rfidTag" name="rfid">
+  </div>
+</form>
+<button type="submit" class="btn">Registrer</button>
+  
