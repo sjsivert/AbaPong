@@ -8,12 +8,14 @@ import { LeaderboardComponent } from './components/leaderboard/leaderboard.compo
 import { RegisterComponent } from 'components/register/register.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { RegisterFormComponent } from './components/register/register-form/register-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeaderboardComponent,
     RegisterComponent,
+    RegisterFormComponent,
   ],
   imports: [
     BrowserModule,

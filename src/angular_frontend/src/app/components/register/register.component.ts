@@ -9,9 +9,10 @@ import { Player, PlayerObject } from 'app/model';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  registrerForm: FormGroup;
-  player = PlayerObject;
-  constructor() {
+  public name: string;
+  public rfid: string;
+  constructor(
+  ) {
    }
 
   ngOnInit() {
