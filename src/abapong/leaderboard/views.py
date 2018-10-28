@@ -7,7 +7,7 @@ from rest_framework import viewsets
 from abapong.leaderboard.serializers import UserSerializer, GroupSerializer, PlayerSerializer
 from abapong.leaderboard.models import Player
 
-
+# from rest_framework.viewsets import ModelViewSet, ViewSet
 class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
@@ -26,4 +26,9 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 class PlayerViewSet(viewsets.ModelViewSet):
     queryset = Player.objects.all().order_by('-created')
+    serializer_class = PlayerSerializer
+
+class PlyerByIdViewSet(viewsets.ModelViewSet, id):
+    player = Player.objects.filter(pk=id)
+
     serializer_class = PlayerSerializer
