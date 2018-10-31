@@ -6,7 +6,7 @@ export interface Player {
     elo: number;
 }
 export class PlayerObject {
-    //static create(event: Player) {
-      //  return {name: event.name, rfidTag: event.rfidTag};
-    //}
+    static create(event: Player) {
+        return {name: event.name, rfidTag: event.rfidTag};
+    }
 }

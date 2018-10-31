@@ -1,0 +1,14 @@
+<p>
+  register-form works!
+</p>
+<form #registerForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+ <label for="name">Name:</label> 
+ {{ name }}
+ <input  type="text" class="form-control" id="name" [(ngModel)]="name" name="name" required maxlength=20>
+  <label for="rfid">RFID:</label>
+  {{ RFID }}
+  <input  type="text" class="form-control" id="RFID" [(ngModel)]="RFID" name="rfid" required maxlength=30>
+  </div>
+<button type="submit" class="btn" [disabled]="!registerForm.form.valid">Registrer</button>
+</form>

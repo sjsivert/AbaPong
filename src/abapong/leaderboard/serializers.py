@@ -17,7 +17,9 @@ class PlayerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Player
         fields = ('id', 'name', 'elo', 'created', 'rfidTag')
-
+    def create(self, validate_data):
+        validated_data = Player.objects.create(**validate_data)
+        return validated_data
 '''class PlayerSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField(required=True, allow_blank=False, max_length=30)
