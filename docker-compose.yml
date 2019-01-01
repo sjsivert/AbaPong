@@ -1,13 +1,22 @@
 version: '3'
-
+volumes:
+    postgresDB:
 services:
   postgres:
     image: postgres
+
+    ports:
+      - 5432:5432
+    env_file:
+      - .env.secret
+
+    volumes:
+      - postgresDB:/var/lib/postgresqel/data
   django:
     build: ./src/django_backend/
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./src/django_backend:/django
+      - ./src/django_backend/:/django
     ports:
       - "8000:8000"
     depends_on:
