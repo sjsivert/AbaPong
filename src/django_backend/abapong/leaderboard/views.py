@@ -28,7 +28,3 @@ class PlayerViewSet(viewsets.ModelViewSet):
     queryset = Player.objects.all().order_by('-created')
     serializer_class = PlayerSerializer
 
-class PlyerByIdViewSet(viewsets.ModelViewSet, id):
-    player = Player.objects.filter(pk=id)
-
-    serializer_class = PlayerSerializer

@@ -24,7 +24,7 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'player', views.PlayerViewSet)
-router.register(r'player/<int:pk>', views.Playe)
+#router.register(r'player/<int:pk>', views.Playe)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

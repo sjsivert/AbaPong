@@ -13,6 +13,7 @@ services:
     volumes:
       - postgresDB:/var/lib/postgresqel/data
   django:
+    tty: true
     build: ./src/django_backend/
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
