@@ -22,14 +22,14 @@ from abapong.leaderboard import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-router.register(r'player', views.PlayerViewSet)
+#router.register(r'player', views.PlayerViewSet)
 #router.register(r'player/<int:pk>', views.Playe)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    #url(r'^api/', include(router.urls)),
-    #url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api/', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('', include('abapong.leaderboard.urls'))
 
 ]
