@@ -4,6 +4,7 @@
 
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
+from rest_framework import generics
 from abapong.leaderboard.serializers import UserSerializer, GroupSerializer, PlayerSerializer
 from abapong.leaderboard.models import Player
 
@@ -24,7 +25,11 @@ class GroupViewSet(viewsets.ModelViewSet):
     serializer_class = GroupSerializer
 
 
-class PlayerViewSet(viewsets.ModelViewSet):
-    queryset = Player.objects.all().order_by('-created')
+class PlayerViewSet(generics.ListCreateAPIView):
+    queryset = Player.objects.all()
+    serializer_class = PlayerSerializer
+
+class PlayerDetailViewSet(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Player.objects.all()
     serializer_class = PlayerSerializer
 
