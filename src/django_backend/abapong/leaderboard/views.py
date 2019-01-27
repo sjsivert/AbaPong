@@ -8,6 +8,10 @@ from rest_framework import generics
 from abapong.leaderboard.serializers import UserSerializer, GroupSerializer, PlayerSerializer
 from abapong.leaderboard.models import Player
 
+from rest_framework.decorators import action
+from rest_framework.response import Response
+import requests
+
 # from rest_framework.viewsets import ModelViewSet, ViewSet
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -25,11 +29,21 @@ class GroupViewSet(viewsets.ModelViewSet):
     serializer_class = GroupSerializer
 
 
-class PlayerViewSet(generics.ListCreateAPIView):
+class PlayerViewSet(viewsets.ModelViewSet):
     queryset = Player.objects.all()
     serializer_class = PlayerSerializer
 
-class PlayerDetailViewSet(generics.RetrieveUpdateDestroyAPIView):
+    @action(detail=True, methods=['GET'])
+    def player_info(self, request, pk=None):
+        player = self.get_object()
+        r = requests.get('https://lego.abakus.no/api/v1/users/'+ player.name)
+        r = r.json()
+        print(r)
+        return Response(r)
+
+
+
+class PlayerDetailViewSet(viewsets.ModelViewSet):
     queryset = Player.objects.all()
     serializer_class = PlayerSerializer
 
